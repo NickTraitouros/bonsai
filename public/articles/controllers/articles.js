@@ -39,7 +39,6 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$st
             article.updated = [];
         }
         article.updated.push(new Date().getTime());
-        console.log(article);
         article.$update(function() {
             $location.path('articles/' + article._id);
         });
