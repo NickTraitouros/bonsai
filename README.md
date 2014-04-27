@@ -1,3 +1,8 @@
+# Bonsai 
+
+Need to have mongo server running on port 27017 before running server.js
+Leaving all the MEAN.io stuff below for now since it has useful instructions for using the boilerplate
+
 # [![MEAN Logo](http://www.mean.io/img/logos/meanlogo.png)](http://mean.io/) MEAN Stack
 
 [![Build Status](https://travis-ci.org/linnovate/mean.png?branch=master)](https://travis-ci.org/linnovate/mean)
