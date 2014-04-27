@@ -14,6 +14,14 @@ angular.module('mean.system').controller('HeaderController', ['$scope', '$rootSc
             'roles': ['authenticated'],
             'title': 'Create New Article',
             'link': 'create article'
+        }, {
+            'roles': ['authenticated'],
+            'title': 'Create New Tree',
+            'link': 'create tree'            
+        }, {
+            'roles': ['authenticated'],
+            'title': 'Trees',
+            'link': 'all trees'            
         }];
 
         // Query menus added by modules. Only returns menus that user is allowed to see.

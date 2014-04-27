@@ -1,0 +1,14 @@
+<section data-ng-controller="TreesController" data-ng-init="findOne()">
+    <span>{{tree.created | date:'medium'}}</span> /
+    <span>{{tree.user.name}}</span>
+    <h2>{{tree.species}} ({{tree.age}})</h2>
+    <div data-ng-show="global.user._id == tree.user._id">
+        <a class="btn" href="/#!/trees/{{tree._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn" data-ng-click="remove();">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+    <div>{{tree.description}}</div>
+</section>

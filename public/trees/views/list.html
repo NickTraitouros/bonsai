@@ -1,0 +1,11 @@
+<section data-ng-controller="TreesController" data-ng-init="find()">
+    <ul class="trees unstyled">
+        <li data-ng-repeat="tree in trees">
+            <span>{{tree.created | date:'medium'}}</span> /
+            <span>{{tree.user.name}}</span>
+            <h2><a data-ng-href="#!/trees/{{tree._id}}">{{tree.species}} ({{tree.age}})</a></h2>
+            <div>{{tree.description}}</div>
+        </li>
+    </ul>
+    <h1 data-ng-hide="!trees || trees.length">No trees yet. <br> Why don't you <a href="/#!/trees/create">Create One</a>?</h1>
+</section>
