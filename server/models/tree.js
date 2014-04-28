@@ -20,6 +20,10 @@ var TreeSchema = new Schema({
         default: '',
         trim: true
     },
+    birthday: {
+        type: Date,
+        default: Date.now
+    },
     age: {
         type: Number,
         default: '',

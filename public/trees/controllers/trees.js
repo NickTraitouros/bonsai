@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('mean.trees').controller('TreesController', ['$scope', '$stateParams', '$location', 'Global', 'Trees', function ($scope, $stateParams, $location, Global, Trees) {
+angular.module('mean.trees').controller('TreesController', ['$scope', '$filter', '$stateParams', '$location', 'Global', 'Trees', function ($scope, $filter, $stateParams, $location, Global, Trees) {
     $scope.global = Global;
 
     $scope.create = function() {
         var tree = new Trees({
             species: this.species,
+            birthday: this.birthday,
             age: this.age,
             description: this.description
         });
@@ -14,6 +15,7 @@ angular.module('mean.trees').controller('TreesController', ['$scope', '$statePar
         });
 
         this.species = '';
+        this.birthday = new Date;
         this.age = 0;
         this.description = '';
     };
@@ -56,6 +58,7 @@ angular.module('mean.trees').controller('TreesController', ['$scope', '$statePar
             treeId: $stateParams.treeId
         }, function(tree) {
             $scope.tree = tree;
+            $scope.tree.birthday = $filter("date")($scope.tree.birthday, 'yyyy-MM-dd');
         });
     };
 }]);
